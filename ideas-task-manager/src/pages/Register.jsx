@@ -24,9 +24,9 @@ function Register() {
     <div className="flex items-center justify-center min-h-screen bg-gray-200 px-4">
       <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-xl transition-all duration-500 ease-in-out transform hover:scale-105">
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Create Account</h2>
-        
+
         {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
-        
+
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name Input */}
           <div>
@@ -62,6 +62,9 @@ function Register() {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+            <li className="text-sm text-yellow-600 mt-2">
+              Password must at least one uppercase letter, one number.
+            </li>
           </div>
 
           {/* Submit Button */}
